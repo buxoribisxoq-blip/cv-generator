@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CV Generator</title>
+</head>
+<body style="font-family:Arial; text-align:center; padding:30px;">
+
+<h1>🧠 CV Generator</h1>
+
+<input id="name" placeholder="Ism"><br><br>
+<input id="email" placeholder="Email"><br><br>
+<textarea id="skills" placeholder="Ko‘nikmalar"></textarea><br><br>
+
+<button onclick="generate()">CV yaratish</button>
+
+<div id="result"></div>
+
+<script>
+function generate() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let skills = document.getElementById("skills").value;
+
+  document.getElementById("result").innerHTML =
+    "<h2>" + name + "</h2>" +
+    "<p>Email: " + email + "</p>" +
+    "<p>Skills: " + skills + "</p>";
+}
+</script>
+
+</body>
+</html>
